@@ -6,7 +6,7 @@
 
 body {
   margin: 0;
-  font-family: "Noto Sans JP", sans-serif;
+  font-family: 'Noto Sans JP', sans-serif;
   line-height: 1.6;
 }
 
@@ -38,6 +38,7 @@ section {
   flex-wrap: wrap;
   justify-content: center;
 }
+
 .split > * {
   flex-basis: 30%;
   min-width: 15em;
@@ -54,28 +55,28 @@ section {
   font-weight: 700;
   text-transform: uppercase;
   font-size: 1.125rem;
-  padding: 0.5em 1.25em;
+  padding: .5em 1.25em;
   background: var(--clr-accent, blue);
-  border-radius: 0.25em;
-  transition: transform 250ms ease-in-out, opacity 250ms linear;
+  border-radius: .25em;
+  transition: transform 250ms ease-in-out, opacity 250ms linear;
 }
 
 .btn:hover,
 .btn:focus {
   transform: scale(1.1);
-  opacity: 0.9;
+  opacity: .9;
 }
 
 .primary-title {
   font-size: 4rem;
-  font-size: clamp(3rem, 5vw + 1rem, 4.5rem);
+  font-size: clamp(3rem, calc(5vw + 1rem), 4.5rem);
   line-height: 1;
   text-transform: uppercase;
 }
 
 .section-title {
   text-align: center;
-  font-size: clamp(2.5rem, 5vw + 1rem, 4rem);
+  font-size: clamp(2.5rem, calc(5vw + 1rem), 4rem);
   line-height: 1;
   color: #17353d;
   margin-bottom: 5rem;
@@ -87,6 +88,7 @@ section {
   padding: 15em 0;
   background: #222;
 }
+
 @supports (background-blend-mode: multiply) {
   .hero {
     background: url(img/shoe3.png), radial-gradient(#444, #111);
@@ -100,6 +102,7 @@ section {
 .featured {
   background: #eee;
 }
+
 .featured__item {
   display: block;
   position: relative;
@@ -110,15 +113,18 @@ section {
   text-align: center;
   line-height: 1.2;
 }
+
 .featured__item:hover, .featured__item:focus {
   transform: scale(1);
 }
+
 .featured__item:hover .featured__details, .featured__item:focus .featured__details {
   opacity: 1;
   text-shadow: 0 0 2em white;
 }
+
 .featured__item::after {
-  content: "";
+  content: '';
   position: absolute;
   top: 10%;
   left: 10%;
@@ -127,10 +133,12 @@ section {
   background: #2193b0;
   z-index: -1;
 }
+
 .featured__details {
   opacity: 0;
   transition: opacity 250ms linear;
 }
+
 .featured__details span {
   display: block;
   font-weight: 700;
@@ -144,16 +152,19 @@ section {
   margin-bottom: 5em;
   text-align: center;
 }
+
 .product__title {
-  font-size: clamp(3rem, 5vw + 1rem, 5.5rem);
+  font-size: clamp(3rem, calc(5vw + 1rem), 5.5rem);
   text-transform: uppercase;
   line-height: 1;
   color: #fff;
   text-shadow: 0 0 0.2em rgba(0, 0, 0, 0.2);
 }
+
 .product__image {
   margin: -5em 0 0 0;
 }
+
 @media (min-width: 45em) {
   .product {
     text-align: left;
@@ -170,10 +181,11 @@ section {
     margin: 0 -5em 0 0;
   }
   .product.shoe-left .product__image {
-    float: left;
+    float: right;
+    width: 65%;
     shape-outside: url(img/shoe2.png);
-    margin: 0 0 0 -5em;
-    shape-margin: 2em;
+    shape-margin: 1em;
+    margin: -1em -5em 0 0;
   }
 }
 
@@ -197,4 +209,4 @@ section {
   --clr-inner: #6dd5ed;
   --clr-outer: #2193b0;
   --clr-accent: #008951;
-}/*# sourceMappingURL=main.css.map */
+}
